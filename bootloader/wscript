@@ -286,8 +286,8 @@ def set_arch_flags(ctx):
         # Option -m32/-m64 has to be passed to cflags and linkflages.
         elif ctx.env.PYI_ARCH == '32bit':
             ctx.check_cc(ccflags='-m32', msg='Checking for flags -m32')
-            ctx.env.append_value('CFLAGS', '-m32')
-            ctx.env.append_value('LINKFLAGS', '-m32')
+            #ctx.env.append_value('CFLAGS', '-m32')
+            #ctx.env.append_value('LINKFLAGS', '-m32')
             # Set LARGE_ADDRESS_AWARE_FLAG to True.
             # On Windows this allows 32bit apps to use 4GB of memory and
             # not only 2GB.
